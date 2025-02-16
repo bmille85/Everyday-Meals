@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Brittany Miller" />
+    <link rel="stylesheet" href="styles.css"/>
+    <title>Cooking Tutorials - Everyday Meals</title>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <!-- Logo -->
+            <div class="logo">
+                <img src="images/logo.png" alt="Everyday Meals Logo">
+            </div>
+
+            <!-- Navigation Menu -->
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="recipes.html">Recipes</a></li>
+                    <li class="nav-active-page"><a href="tutorials.html">Tutorials</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Search Bar -->
+            <div class="search-bar">
+                <input type="text" placeholder="Search tutorials...">
+                <button type="submit">🔍</button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <!-- Tutorial Intro -->
+        <section class="tutorial-intro">
+            <h1>Cooking Tutorials</h1>
+            <p>Learn essential cooking techniques and tips to elevate your skills in the kitchen.</p>
+        </section>
+
+        <!-- Tutorial List -->
+        <section class="tutorial-list">
+            <h2>Featured Tutorials</h2>
+            <div class="tutorial-grid">
+                <!-- Tutorial Card 1 -->
+                <div class="tutorial-card">
+                    <img src="images/knife-skills.jpg" alt="Knife Skills">
+                    <h3>Knife Skills 101</h3>
+                    <p>Master the basics of chopping, slicing, and dicing like a pro.</p>
+                    <a href="knife-skills.html" class="btn">View Tutorial</a>
+                </div>
+
+                <!-- Tutorial Card 2 -->
+                <div class="tutorial-card">
+                    <img src="images/sauce-making.jpg" alt="Sauce Making">
+                    <h3>How to Make Sauces</h3>
+                    <p>Learn how to create classic sauces like béchamel, hollandaise, and more.</p>
+                    <a href="sauce-making.html" class="btn">View Tutorial</a>
+                </div>
+
+                <!-- Tutorial Card 3 -->
+                <div class="tutorial-card">
+                    <img src="images/baking-basics.jpg" alt="Baking Basics">
+                    <h3>Baking Basics</h3>
+                    <p>Understand the science behind baking and perfect your pastries.</p>
+                    <a href="baking-basics.html" class="btn">View Tutorial</a>
+                </div>
+
+                <!-- Tutorial Card 4 -->
+                <div class="tutorial-card">
+                    <img src="images/grilling-techniques.jpg" alt="Grilling Techniques">
+                    <h3>Grilling Techniques</h3>
+                    <p>Learn how to grill meats, vegetables, and more to perfection.</p>
+                    <a href="grilling-techniques.html" class="btn">View Tutorial</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Step-by-Step Tutorial Example -->
+        <section class="step-by-step">
+            <h2>Step-by-Step: Knife Skills 101</h2>
+            <div class="steps">
+                <!-- Step 1 -->
+                <div class="step">
+                    <h3>Step 1: Choose the Right Knife</h3>
+                    <p>Select a sharp chef's knife for most tasks. A paring knife is ideal for smaller, detailed work.</p>
+                    <input type="checkbox" id="step1">
+                    <label for="step1">Mark as Complete</label>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="step">
+                    <h3>Step 2: Hold the Knife Properly</h3>
+                    <p>Grip the handle firmly and place your thumb and index finger on the blade for control.</p>
+                    <input type="checkbox" id="step2">
+                    <label for="step2">Mark as Complete</label>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="step">
+                    <h3>Step 3: Master Basic Cuts</h3>
+                    <p>Practice the chop, slice, and dice techniques on vegetables like carrots and onions.</p>
+                    <input type="checkbox" id="step3">
+                    <label for="step3">Mark as Complete</label>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="step">
+                    <h3>Step 4: Keep Your Knife Sharp</h3>
+                    <p>Regularly sharpen your knife using a honing rod or whetstone for optimal performance.</p>
+                    <input type="checkbox" id="step4">
+                    <label for="step4">Mark as Complete</label>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Everyday Meals. All rights reserved.</p>
+    </footer>
+</body>
+</html>
