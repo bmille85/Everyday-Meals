@@ -1,591 +1,617 @@
-/* General Styles */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    background: #F5F1E8; /* Creamy White */
-    color: #4A3F35; /* Dark Brown */
+/* Define CSS variables for the new color palette */
+:root {
+   --dun: #cdc5b4; /* Warm, muted beige */
+  --black: #07020d; /* Deep black for contrast */
+  --hunter-green: #47603d; /* Earthy green for accents */
+  --sepia: #5c3600; /* Warm brown for text and borders */
+  --chocolate-cosmos: #450014; /* Rich reddish-brown for highlights */
 }
 
-h1, h2 {
-    color: #8B7355; /* Warm Brown */
+/* Define the Havioleta Handwritten font for headers */
+@font-face {
+  font-family: 'Havioleta Handwritten';
+  src: url('fonts/havioleta-handwritten.woff2') format('woff2'),
+       url('fonts/havioleta-handwritten.woff') format('woff'),
+       url('fonts/havioleta-handwritten.ttf') format('truetype'),
+       url('fonts/havioleta-handwritten.eot') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Define the Teachers font for body text */
+@font-face {
+  font-family: 'Teachers';
+  src: url('fonts/teachers.woff2') format('woff2'),
+       url('fonts/teachers.woff') format('woff'),
+       url('fonts/teachers.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* General Styles */
+body {
+  font-family: 'Teachers', sans-serif; /* Teachers font for body text */
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background: var(--dun);
+  color: var(--black);
+  background-size: cover;
+}
+
+/* Headers with Havioleta Handwritten font */
+h1, h2, h3 {
+  font-family: 'Havioleta Handwritten', cursive; /* Havioleta for headers */
+  color: var(--chocolate-cosmos);
+  font-weight: 700; /* Bold */
+  letter-spacing: 2px; /* More spacing */
+  margin: 1.5rem 0; /* Add more margin for spacing */
+}
+
+h1 {
+  font-size: 3rem; /* Larger size for h1 */
+}
+
+h2 {
+  font-size: 2.5rem; /* Slightly smaller for h2 */
+}
+
+h3 {
+  font-size: 2rem; /* Smaller for h3 */
 }
 
 img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border: 2px solid var(--sepia); /* Add a warm border to images */
 }
 
 main {
-    padding: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /* Header Styles */
 header {
-    background: #8B7355; /* Warm Brown */
-    color: #FFFFFF; /* White */
-    padding: 1rem 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+  background: var(--hunter-green);
+  color: var(--dun);
+  padding: 1rem 0; /* Adjust padding if needed */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .header-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
 /* Logo */
 .logo img {
-    height: 50px; /* Adjust based on your logo size */
-    width: auto;
+  height: 70px; /* Increased logo size */
+  width: auto; /* Maintain aspect ratio */
+  border: none; /* Remove any border */
 }
-
 /* Navigation Menu */
 nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    gap: 1.5rem; /* Space between menu items */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 1.5rem;
 }
 
 nav ul li {
-    margin: 0;
+  margin: 0;
 }
 
 nav ul li a {
-    color: #FFFFFF; /* White */
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
+  font-family: 'Havioleta Handwritten', cursive;
+  color: var(--dun);
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  font-size: 1.25rem;
 }
 
 nav ul li a:hover {
-    color: #6B8E23; /* Olive Green */
+  background-color: var(--sepia);
+  color: var(--dun);
+  transform: translateY(-2px);
 }
 
+
+/* Active Page Style */
 .nav-active-page a {
-    color: #6B8E23; /* Olive Green */
+  background-color: var(--chocolate-cosmos);
+  color: var(--dun);
 }
+
 
 /* Search Bar */
 .search-bar {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .search-bar input {
-    padding: 0.5rem;
-    border: 1px solid #A67C52; /* Light Brown */
-    border-radius: 5px;
-    margin-right: 0.5rem;
-    background: #FFFFFF; /* White */
-    color: #4A3F35; /* Dark Brown */
+  padding: 0.5rem;
+  border: 1px solid var(--sepia);
+  border-radius: 5px;
+  margin-right: 0.5rem;
+  background: var(--dun);
+  color: var(--black);
+  font-family: 'Teachers', sans-serif; /* Teachers font for input */
 }
 
 .search-bar button {
-    background: #A67C52; /* Light Brown */
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-    color: #FFFFFF; /* White */
+  background: var(--sepia);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  color: var(--dun);
+  font-family: 'Havioleta Handwritten', cursive; /* Handwritten font for button */
 }
 
 .search-bar button:hover {
-    background: #8B7355; /* Warm Brown */
+  background: var(--chocolate-cosmos);
 }
 
 /* Hero Section */
 .hero {
-    background: url('hero-image.jpg') no-repeat center center/cover;
-    color: #FFFFFF; /* White */
-    text-align: center;
-    padding: 5rem 1rem;
+  background: url('images/hero-image.jpg') no-repeat center center/cover;
+  color: var(--dun);
+  text-align: center;
+  padding: 2rem 1rem; /* Reduced padding to minimize gap */
 }
 
 .hero h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+  font-size: 3rem;
+  margin: 0 0 1rem 0; /* Adjusted margin to reduce gap */
+  color: var(--chocolate-cosmos);
 }
 
 .hero p {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
+  font-size: 1.5rem;
+  margin: 0 0 2rem 0; /* Adjusted margin to reduce gap */
+  color: var(--black);
 }
 
 .hero .btn {
-    background: #A67C52; /* Light Brown */
-    color: #FFFFFF; /* White */
-    padding: 0.75rem 1.5rem;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background 0.3s ease;
+  background: var(--sepia);
+  color: var(--dun);
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease, transform 0.3s ease;
+  font-family: 'Havioleta Handwritten', cursive;
 }
 
 .hero .btn:hover {
-    background: #8B7355; /* Warm Brown */
+  background: var(--chocolate-cosmos);
+  transform: translateY(-2px);
 }
 
-/* Recipe Grid */
+/* Recipe and Tutorial Grid */
 .recipe-grid, .tutorial-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    padding: 2rem;
-    text-align: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  text-align: center;
 }
 
 .recipe-card, .tutorial-card {
-    background: #FFFFFF; /* White */
-    border: 1px solid #D4C8B8; /* Light Beige */
-    border-radius: 10px;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-align: center;
+  background: var(--dun);
+  border: 2px solid var(--sepia);
+  border-radius: 10px;
+  overflow: hidden; /* Ensures the image stays within the card */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  background-image: url('images/paper-texture.png'); /* Add paper texture to cards */
+  background-size: cover;
 }
 
 .recipe-card:hover, .tutorial-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .recipe-card img, .tutorial-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block; /* Removes default inline-block spacing */
+  margin: 0; /* Removes default margin */
+  padding: 0; /* Removes default padding */
 }
 
+
 .recipe-card h3, .tutorial-card h3 {
-    font-size: 1.5rem;
-    margin: 1rem 0;
-    color: #8B7355; /* Warm Brown */
+  font-size: 1.5rem;
+  margin: 1rem 0;
+  color: var(--chocolate-cosmos);
 }
 
 .recipe-card p, .tutorial-card p {
-    padding: 0 1rem;
-    color: #4A3F35; /* Dark Brown */
+  padding: 0 1rem;
+  color: var(--black);
 }
 
 .recipe-card .btn, .tutorial-card .btn {
-    display: inline-block;
-    background: #A67C52; /* Light Brown */
-    color: #FFFFFF; /* White */
-    padding: 0.5rem 1rem;
-    margin: 1rem 0;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background 0.3s ease;
+  display: inline-block;
+  background: var(--sepia);
+  color: var(--dun);
+  padding: 0.5rem 1rem;
+  margin: 1rem 0;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease, transform 0.3s ease;
+  font-family: 'Havioleta Handwritten', cursive; /* Handwritten font for button */
 }
 
 .recipe-card .btn:hover, .tutorial-card .btn:hover {
-    background: #8B7355; /* Warm Brown */
-}
-
-/* Recipe Intro */
-.recipe-intro, .tutorial-intro {
-    text-align: center;
-    margin-bottom: 2rem;
-}
-
-.recipe-intro img, .tutorial-intro img {
-    width: 100%;
-    max-height: 400px;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-.recipe-intro p, .tutorial-intro p {
-    font-size: 1.2rem;
-    color: #4A3F35; /* Dark Brown */
-    margin-top: 1rem;
-}
-
-/* Ingredients Checklist */
-.ingredients, .instructions, .steps {
-    background: #FFFFFF; /* White */
-    padding: 1.5rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-bottom: 2rem;
-}
-
-.ingredients h2, .instructions h2, .step-by-step h2 {
-    margin-top: 0;
-    color: #8B7355; /* Warm Brown */
-}
-
-.ingredients ul {
-    list-style: none;
-    padding: 0;
-}
-
-.ingredients ul li {
-    margin: 0.5rem 0;
-    display: flex;
-    align-items: center;
-}
-
-.ingredients ul li input[type="checkbox"] {
-    margin-right: 1rem;
-    cursor: pointer;
-}
-
-/* Instructions */
-.instructions ol {
-    padding-left: 1.5rem;
-}
-
-.instructions ol li {
-    margin: 1rem 0;
-}
-
-/* Step-by-Step Tutorial */
-.step-by-step {
-    padding: 2rem;
-    background: #FFFFFF; /* White */
-}
-
-.steps {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.step {
-    background: #F5F1E8; /* Creamy White */
-    border: 1px solid #D4C8B8; /* Light Beige */
-    border-radius: 10px;
-    padding: 1.5rem;
-    margin-bottom: 1rem;
-}
-
-.step h3 {
-    color: #8B7355; /* Warm Brown */
-    margin-top: 0;
-}
-
-.step p {
-    color: #4A3F35; /* Dark Brown */
-}
-
-.step input[type="checkbox"] {
-    margin-right: 0.5rem;
-}
-
-.step label {
-    color: #6B8E23; /* Olive Green */
-    cursor: pointer;
+  background: var(--chocolate-cosmos);
+  transform: translateY(-2px);
 }
 
 /* Footer */
 footer {
-    background: #8B7355; /* Warm Brown */
-    color: #FFFFFF; /* White */
-    text-align: center;
-    padding: 1rem 0;
-    margin-top: 2rem;
+  background: var(--hunter-green);
+  color: var(--dun);
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 2rem;
+  border-top: 2px solid var(--sepia); /* Add a warm border to the footer */
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .header-content {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1rem;
-    }
-
-    nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .search-bar {
-        width: 100%;
-        justify-content: flex-end;
-    }
-}
-
-/* Featured Recipes and Tutorials */
-.featured {
-    padding: 2rem;
-    background: #FFFFFF; /* White */
-}
-
-.featured h2 {
-    color: #8B7355; /* Warm Brown */
-    text-align: center;
-    margin-bottom: 2rem;
-}
-
-.featured-recipes, .featured-tutorials {
-    margin-bottom: 3rem;
-}
-
-.recipe-grid, .tutorial-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-}
-
-.recipe-card, .tutorial-card {
-    background: #F5F1E8; /* Creamy White */
-    border: 1px solid #D4C8B8; /* Light Beige */
-    border-radius: 10px;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-align: center;
-}
-
-.recipe-card:hover, .tutorial-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.recipe-card img, .tutorial-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.recipe-card h3, .tutorial-card h3 {
-    font-size: 1.5rem;
-    margin: 1rem 0;
-    color: #8B7355; /* Warm Brown */
-}
-
-.recipe-card p, .tutorial-card p {
-    padding: 0 1rem;
-    color: #4A3F35; /* Dark Brown */
-}
-
-.recipe-card .btn, .tutorial-card .btn {
-    display: inline-block;
-    background: #A67C52; /* Light Brown */
-    color: #FFFFFF; /* White */
-    padding: 0.5rem 1rem;
-    margin: 1rem 0;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background 0.3s ease;
-}
-
-.recipe-card .btn:hover, .tutorial-card .btn:hover {
-    background: #8B7355; /* Warm Brown */
-}
-
-/* About Section */
-.about {
-    padding: 2rem;
-    background: #FFFFFF; /* White */
-    margin-bottom: 2rem;
-}
-
-.about h1 {
-    color: #8B7355; /* Warm Brown */
-    text-align: center;
-    margin-bottom: 2rem;
-}
-
-.about-content {
-    display: flex;
+  .header-content {
     flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-}
+    align-items: flex-start;
+    gap: 1rem;
+  }
 
-.about-text {
-    max-width: 800px;
-    text-align: center;
-}
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 
-.about-text p {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: #4A3F35; /* Dark Brown */
-    margin-bottom: 1.5rem;
-}
-
-.about-image img {
+  .search-bar {
     width: 100%;
-    max-width: 500px;
-    border-radius: 10px;
+    justify-content: flex-end;
+  }
 }
 
-/* Team Section */
-.team {
-    padding: 2rem;
-    background: #F5F1E8; /* Creamy White */
-    margin-bottom: 2rem;
+/* Ingredients Checklist */
+.ingredients ul {
+  list-style: none; /* Remove bullet points */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
 }
 
-.team h2 {
-    color: #8B7355; /* Warm Brown */
-    text-align: center;
-    margin-bottom: 2rem;
+.ingredients ul li {
+  margin: 0.5rem 0;
+  display: flex;
+  align-items: center;
 }
 
-.team-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
+.ingredients ul li input[type="checkbox"] {
+  appearance: none; /* Remove default checkbox styling */
+  width: 1.2rem; /* Set width */
+  height: 1.2rem; /* Set height */
+  border: 2px solid var(--sepia); /* Add a border */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer;
+  margin-right: 1rem;
+  position: relative;
 }
 
-.team-member {
-    background: #FFFFFF; /* White */
-    border: 1px solid #D4C8B8; /* Light Beige */
-    border-radius: 10px;
-    padding: 1.5rem;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+.ingredients ul li input[type="checkbox"]:checked {
+  background-color: var(--sepia); /* Change background when checked */
 }
 
-.team-member:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.team-member img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 1rem;
-}
-
-.team-member h3 {
-    color: #8B7355; /* Warm Brown */
-    margin-bottom: 0.5rem;
-}
-
-.team-member p {
-    color: #4A3F35; /* Dark Brown */
-    font-size: 1rem;
+.ingredients ul li input[type="checkbox"]:checked::after {
+  content: "✔"; /* Add a checkmark */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--dun); /* Checkmark color */
+  font-size: 0.9rem;
 }
 
 /* Contact Section */
 .contact {
-    padding: 2rem;
-    background: #FFFFFF; /* White */
-    margin-bottom: 2rem;
+  padding: 2rem;
+  background: var(--dun);
+  color: var(--black);
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .contact h1 {
-    color: #8B7355; /* Warm Brown */
-    text-align: center;
-    margin-bottom: 2rem;
+  font-family: 'Havioleta Handwritten', cursive;
+  color: var(--chocolate-cosmos);
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
 .contact-content {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .contact-form, .contact-info {
-    background: #F5F1E8; /* Creamy White */
-    border: 1px solid #D4C8B8; /* Light Beige */
-    border-radius: 10px;
-    padding: 1.5rem;
+  background: var(--dun);
+  border: 2px solid var(--sepia);
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form:hover, .contact-info:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
 }
 
 .contact-form h2, .contact-info h2 {
-    color: #8B7355; /* Warm Brown */
-    margin-bottom: 1rem;
+  font-family: 'Havioleta Handwritten', cursive;
+  color: var(--chocolate-cosmos);
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
+/* Form Styles */
 .form-group {
-    margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .form-group label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-    color: #4A3F35; /* Dark Brown */
+  display: block;
+  font-family: 'Teachers', sans-serif;
+  font-weight: bold;
+  color: var(--black);
+  margin-bottom: 0.5rem;
 }
 
 .form-group input, .form-group textarea {
-    width: 100%;
-    padding: 0.5rem;
-    border: 1px solid #A67C52; /* Light Brown */
-    border-radius: 5px;
-    background: #FFFFFF; /* White */
-    color: #4A3F35; /* Dark Brown */
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--sepia);
+  border-radius: 5px;
+  background: var(--dun);
+  color: var(--black);
+  font-family: 'Teachers', sans-serif;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+  border-color: var(--hunter-green);
+  box-shadow: 0 0 8px rgba(71, 96, 61, 0.3); /* Focus effect */
+  outline: none;
 }
 
 .form-group textarea {
-    resize: vertical;
+  resize: vertical;
+  min-height: 150px;
 }
 
 .contact-form .btn {
-    background: #A67C52; /* Light Brown */
-    color: #FFFFFF; /* White */
-    padding: 0.75rem 1.5rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s ease;
+  background: var(--sepia);
+  color: var(--dun);
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Havioleta Handwritten', cursive;
+  font-size: 1.25rem;
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .contact-form .btn:hover {
-    background: #8B7355; /* Warm Brown */
+  background: var(--chocolate-cosmos);
+  transform: translateY(-2px);
 }
 
+/* Contact Info Styles */
 .contact-info ul {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .contact-info ul li {
-    margin-bottom: 1rem;
-    color: #4A3F35; /* Dark Brown */
+  margin-bottom: 1rem;
+  font-family: 'Teachers', sans-serif;
+  color: var(--black);
 }
 
 .contact-info ul li strong {
-    color: #8B7355; /* Warm Brown */
+  color: var(--chocolate-cosmos);
 }
 
 .contact-info ul li a {
-    color: #6B8E23; /* Olive Green */
-    text-decoration: none;
+  color: var(--hunter-green);
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 .contact-info ul li a:hover {
-    text-decoration: underline;
+  color: var(--sepia);
 }
 
+/* Social Media Links */
 .social-media h3 {
-    color: #8B7355; /* Warm Brown */
-    margin-bottom: 1rem;
+  font-family: 'Havioleta Handwritten', cursive;
+  color: var(--chocolate-cosmos);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .social-media ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 1rem;
 }
 
 .social-media ul li a {
-    color: #6B8E23; /* Olive Green */
-    text-decoration: none;
+  color: var(--hunter-green);
+  text-decoration: none;
+  font-size: 1.5rem;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .social-media ul li a:hover {
-    text-decoration: underline;
+  color: var(--sepia);
+  transform: translateY(-2px);
 }
 
+/* Tutorial Intro */
+.tutorial-intro {
+  text-align: center;
+  padding: 2rem;
+  background: var(--dun);
+  border-radius: 10px;
+  margin: 2rem auto;
+  max-width: 1200px;
+}
+
+.tutorial-intro h1 {
+  font-family: 'Havioleta Handwritten', cursive;
+  color: var(--chocolate-cosmos);
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.tutorial-intro p {
+  font-family: 'Teachers', sans-serif;
+  font-size: 1.25rem;
+  color: var(--black);
+  margin-bottom: 2rem;
+}
+
+.tutorial-intro img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Tutorial Steps */
+.tutorial-steps {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.tutorial-steps h2 {
+  font-family: 'Havioleta Handwritten', cursive;
+  color: var(--chocolate-cosmos);
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.step {
+  background: var(--dun);
+  border: 2px solid var(--sepia);
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.step h3 {
+  font-family: 'Havioleta Handwritten', cursive;
+  color: var(--chocolate-cosmos);
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.step p {
+  font-family: 'Teachers', sans-serif;
+  font-size: 1.1rem;
+  color: var(--black);
+  margin-bottom: 1rem;
+}
+
+.step img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Tips Section */
+.tutorial-tips {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.tutorial-tips h2 {
+  font-family: 'Havioleta Handwritten', cursive;
+  color: var(--chocolate-cosmos);
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.tutorial-tips ul {
+  list-style: none;
+  padding: 0;
+}
+
+.tutorial-tips ul li {
+  font-family: 'Teachers', sans-serif;
+  font-size: 1.1rem;
+  color: var(--black);
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.tutorial-tips ul li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: var(--sepia);
+}
+
+/* Video Container */
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  margin-bottom: 1rem;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
