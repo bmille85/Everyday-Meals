@@ -1,13 +1,12 @@
-/* Define CSS variables for the new color palette */
 :root {
-   --dun: #cdc5b4; /* Warm, muted beige */
-  --black: #07020d; /* Deep black for contrast */
-  --hunter-green: #47603d; /* Earthy green for accents */
-  --sepia: #5c3600; /* Warm brown for text and borders */
-  --chocolate-cosmos: #450014; /* Rich reddish-brown for highlights */
+   --dun: #cdc5b4; 
+  --black: #07020d; 
+  --hunter-green: #47603d; 
+  --sepia: #5c3600; 
+  --chocolate-cosmos: #450014; 
 }
 
-/* Define the Havioleta Handwritten font for headers */
+
 @font-face {
   font-family: 'Havioleta Handwritten';
   src: url('fonts/havioleta-handwritten.woff2') format('woff2'),
@@ -19,7 +18,6 @@
   font-display: swap;
 }
 
-/* Define the Teachers font for body text */
 @font-face {
   font-family: 'Teachers';
   src: url('fonts/teachers.woff2') format('woff2'),
@@ -30,9 +28,8 @@
   font-display: swap;
 }
 
-/* General Styles */
 body {
-  font-family: 'Teachers', sans-serif; /* Teachers font for body text */
+  font-family: 'Teachers', sans-serif; 
   margin: 0;
   padding: 0;
   line-height: 1.6;
@@ -41,32 +38,31 @@ body {
   background-size: cover;
 }
 
-/* Headers with Havioleta Handwritten font */
 h1, h2, h3 {
-  font-family: 'Havioleta Handwritten', cursive; /* Havioleta for headers */
+  font-family: 'Havioleta Handwritten', cursive; 
   color: var(--chocolate-cosmos);
-  font-weight: 700; /* Bold */
-  letter-spacing: 2px; /* More spacing */
-  margin: 1.5rem 0; /* Add more margin for spacing */
+  font-weight: 700; 
+  letter-spacing: 2px; 
+  margin: 1.5rem 0; 
 }
 
 h1 {
-  font-size: 3rem; /* Larger size for h1 */
+  font-size: 3rem; 
 }
 
 h2 {
-  font-size: 2.5rem; /* Slightly smaller for h2 */
+  font-size: 2.5rem; 
 }
 
 h3 {
-  font-size: 2rem; /* Smaller for h3 */
+  font-size: 2rem; 
 }
 
 img {
   max-width: 100%;
   height: auto;
   border-radius: 10px;
-  border: 2px solid var(--sepia); /* Add a warm border to images */
+  border: 2px solid var(--sepia);
 }
 
 main {
@@ -75,11 +71,11 @@ main {
   margin: 0 auto;
 }
 
-/* Header Styles */
+
 header {
   background: var(--hunter-green);
   color: var(--dun);
-  padding: 1rem 0; /* Adjust padding if needed */
+  padding: 1rem 0; 
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -94,13 +90,12 @@ header {
   padding: 0 1rem;
 }
 
-/* Logo */
 .logo img {
-  height: 70px; /* Increased logo size */
-  width: auto; /* Maintain aspect ratio */
-  border: none; /* Remove any border */
+  height: 70px; 
+  width: auto; 
+  border: none; 
 }
-/* Navigation Menu */
+
 nav ul {
   list-style: none;
   padding: 0;
@@ -130,15 +125,11 @@ nav ul li a:hover {
   transform: translateY(-2px);
 }
 
-
-/* Active Page Style */
 .nav-active-page a {
   background-color: var(--chocolate-cosmos);
   color: var(--dun);
 }
 
-
-/* Search Bar */
 .search-bar {
   display: flex;
   align-items: center;
@@ -151,7 +142,7 @@ nav ul li a:hover {
   margin-right: 0.5rem;
   background: var(--dun);
   color: var(--black);
-  font-family: 'Teachers', sans-serif; /* Teachers font for input */
+  font-family: 'Teachers', sans-serif; 
 }
 
 .search-bar button {
@@ -162,30 +153,29 @@ nav ul li a:hover {
   cursor: pointer;
   transition: background 0.3s ease;
   color: var(--dun);
-  font-family: 'Havioleta Handwritten', cursive; /* Handwritten font for button */
+  font-family: 'Havioleta Handwritten', cursive; 
 }
 
 .search-bar button:hover {
   background: var(--chocolate-cosmos);
 }
 
-/* Hero Section */
 .hero {
   background: url('images/hero-image.jpg') no-repeat center center/cover;
   color: var(--dun);
   text-align: center;
-  padding: 2rem 1rem; /* Reduced padding to minimize gap */
+  padding: 2rem 1rem; 
 }
 
 .hero h1 {
   font-size: 3rem;
-  margin: 0 0 1rem 0; /* Adjusted margin to reduce gap */
+  margin: 0 0 1rem 0; 
   color: var(--chocolate-cosmos);
 }
 
 .hero p {
   font-size: 1.5rem;
-  margin: 0 0 2rem 0; /* Adjusted margin to reduce gap */
+  margin: 0 0 2rem 0; 
   color: var(--black);
 }
 
@@ -204,7 +194,6 @@ nav ul li a:hover {
   transform: translateY(-2px);
 }
 
-/* Recipe and Tutorial Grid */
 .recipe-grid, .tutorial-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -217,10 +206,10 @@ nav ul li a:hover {
   background: var(--dun);
   border: 2px solid var(--sepia);
   border-radius: 10px;
-  overflow: hidden; /* Ensures the image stays within the card */
+  overflow: hidden; 
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: center;
-  background-image: url('images/paper-texture.png'); /* Add paper texture to cards */
+  background-image: url('images/paper-texture.png'); 
   background-size: cover;
 }
 
@@ -233,11 +222,10 @@ nav ul li a:hover {
   width: 100%;
   height: 200px;
   object-fit: cover;
-  display: block; /* Removes default inline-block spacing */
-  margin: 0; /* Removes default margin */
-  padding: 0; /* Removes default padding */
+  display: block; 
+  margin: 0; 
+  padding: 0; 
 }
-
 
 .recipe-card h3, .tutorial-card h3 {
   font-size: 1.5rem;
@@ -259,7 +247,7 @@ nav ul li a:hover {
   text-decoration: none;
   border-radius: 5px;
   transition: background 0.3s ease, transform 0.3s ease;
-  font-family: 'Havioleta Handwritten', cursive; /* Handwritten font for button */
+  font-family: 'Havioleta Handwritten', cursive; 
 }
 
 .recipe-card .btn:hover, .tutorial-card .btn:hover {
@@ -267,17 +255,15 @@ nav ul li a:hover {
   transform: translateY(-2px);
 }
 
-/* Footer */
 footer {
   background: var(--hunter-green);
   color: var(--dun);
   text-align: center;
   padding: 1rem 0;
   margin-top: 2rem;
-  border-top: 2px solid var(--sepia); /* Add a warm border to the footer */
+  border-top: 2px solid var(--sepia); 
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .header-content {
     flex-direction: column;
@@ -296,11 +282,10 @@ footer {
   }
 }
 
-/* Ingredients Checklist */
 .ingredients ul {
-  list-style: none; /* Remove bullet points */
-  padding: 0; /* Remove default padding */
-  margin: 0; /* Remove default margin */
+  list-style: none; 
+  padding: 0; 
+  margin: 0; 
 }
 
 .ingredients ul li {
@@ -310,31 +295,30 @@ footer {
 }
 
 .ingredients ul li input[type="checkbox"] {
-  appearance: none; /* Remove default checkbox styling */
-  width: 1.2rem; /* Set width */
-  height: 1.2rem; /* Set height */
-  border: 2px solid var(--sepia); /* Add a border */
-  border-radius: 4px; /* Rounded corners */
+  appearance: none; 
+  width: 1.2rem; 
+  height: 1.2rem; 
+  border: 2px solid var(--sepia); 
+  border-radius: 4px; 
   cursor: pointer;
   margin-right: 1rem;
   position: relative;
 }
 
 .ingredients ul li input[type="checkbox"]:checked {
-  background-color: var(--sepia); /* Change background when checked */
+  background-color: var(--sepia); 
 }
 
 .ingredients ul li input[type="checkbox"]:checked::after {
-  content: "✔"; /* Add a checkmark */
+  content: "✔"; 
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: var(--dun); /* Checkmark color */
+  color: var(--dun); 
   font-size: 0.9rem;
 }
 
-/* Contact Section */
 .contact {
   padding: 2rem;
   background: var(--dun);
@@ -364,13 +348,13 @@ footer {
   border: 2px solid var(--sepia);
   border-radius: 10px;
   padding: 1.5rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .contact-form:hover, .contact-info:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); 
 }
 
 .contact-form h2, .contact-info h2 {
@@ -380,9 +364,9 @@ footer {
   margin-bottom: 1rem;
 }
 
-/* Form Styles */
 .form-group {
   margin-bottom: 1.5rem;
+  padding-right: 25px
 }
 
 .form-group label {
@@ -407,7 +391,7 @@ footer {
 
 .form-group input:focus, .form-group textarea:focus {
   border-color: var(--hunter-green);
-  box-shadow: 0 0 8px rgba(71, 96, 61, 0.3); /* Focus effect */
+  box-shadow: 0 0 8px rgba(71, 96, 61, 0.3); 
   outline: none;
 }
 
@@ -433,7 +417,6 @@ footer {
   transform: translateY(-2px);
 }
 
-/* Contact Info Styles */
 .contact-info ul {
   list-style: none;
   padding: 0;
@@ -460,7 +443,6 @@ footer {
   color: var(--sepia);
 }
 
-/* Social Media Links */
 .social-media h3 {
   font-family: 'Havioleta Handwritten', cursive;
   color: var(--chocolate-cosmos);
@@ -488,7 +470,6 @@ footer {
   transform: translateY(-2px);
 }
 
-/* Tutorial Intro */
 .tutorial-intro {
   text-align: center;
   padding: 2rem;
@@ -519,7 +500,6 @@ footer {
   border-radius: 10px;
 }
 
-/* Tutorial Steps */
 .tutorial-steps {
   max-width: 1200px;
   margin: 2rem auto;
@@ -563,7 +543,6 @@ footer {
   border-radius: 10px;
 }
 
-/* Tips Section */
 .tutorial-tips {
   max-width: 1200px;
   margin: 2rem auto;
@@ -599,11 +578,10 @@ footer {
   color: var(--sepia);
 }
 
-/* Video Container */
 .video-container {
   position: relative;
   width: 100%;
-  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  padding-bottom: 56.25%;
   margin-bottom: 1rem;
 }
 
